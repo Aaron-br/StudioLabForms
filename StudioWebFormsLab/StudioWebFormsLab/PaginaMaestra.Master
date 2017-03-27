@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestra.master.cs" Inherits="StudioWebFormsLab.PaginaMaestra" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+ 
+</head>
+<body>
+
+    <header>
+        <asp:ContentPlaceHolder ID="Header" runat="server">
+            
+        </asp:ContentPlaceHolder>
+    </header>
+
+
+    <form id="form1" runat="server">
+    <div>
+        
+
+        <asp:ContentPlaceHolder ID="Menu" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="Contenido" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+       
+
+    </div>
+    </form>
+</body>
+</html>
