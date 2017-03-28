@@ -1,0 +1,61 @@
+﻿
+/* Mis Estilos */
+
+body, html {
+
+    width: 100%;
+    height: 100%;
+}
+
+header {
+   
+    background-color: black;
+    color: white;
+}
+
+footer {
+
+    background-color: black;
+    color: white;
+}
+
+header.container img {
+
+     margin-top: 10px;
+     margin-bottom: 10px;
+     width: 150px;
+     height: 58.679px;
+}
+
+#IconoLogin {
+
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 75px;
+    opacity: 0.5;
+}
+
+section.main {
+
+    margin-top: 30px;
+}
+
+section#icon-loginSection {
+
+    margin-top: 100px;
+}
+
+
+/* Reglas para mostrar la hora en el footer*/
+/*.fecha_hora {
+  
+    font-size: 1.2em;
+    padding-top: 10px; 
+}
+
+.fecha_dia {
+    
+    font-size: 1.6em;
+    padding-bottom: 5px;
+}*/

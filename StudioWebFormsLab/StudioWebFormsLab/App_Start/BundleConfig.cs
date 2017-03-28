@@ -31,6 +31,9 @@ namespace StudioWebFormsLab.App_Start
             bundles.Add(new StyleBundle("~/bundles/css/bootstrap").Include(
                        "~/Content/bootstrap.css"));
 
+            bundles.Add(new StyleBundle("~/bundles/css/estilos").Include(
+                       "~/Content/MisEstilos.css"));
+
             bundles.Add(new StyleBundle("~/bundles/css/jqueryUI").Include(
                        "~/Content/Themes/base/*.css"));
 
