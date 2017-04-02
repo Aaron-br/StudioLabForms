@@ -22,6 +22,7 @@
 
     <div class="container">
 
+        
         <!-- Fila -->
         <section id="icon-loginSection" class="row">
             <div class="col-md-4 col-md-offset-4 text-center">
@@ -29,7 +30,7 @@
             </div>
         </section>
 
-
+        
          <!-- Fila -->
         <section class="main row">
            
@@ -41,16 +42,16 @@
 
                         <div class="form-group">
                         <label for="txtUsuario">Usuario</label>     
-                        <asp:textbox class="form-control" id="txtUsuario" placeholder="Introduzca el usuario" runat="server"></asp:textbox>    
+                        <asp:textbox class="form-control" id="txtUsuario" placeholder="Introduzca el usuario" runat="server" CssClass="form-control"></asp:textbox>    
                         </div>
 
                         <div class="form-group">
                         <label for="txtpwd">Password</label>
-                        <asp:textbox class="form-control" id="txtpwd" placeholder="Introduzca password" runat="server" textmode="Password"></asp:textbox>
+                        <asp:textbox class="form-control" id="txtpwd" placeholder="Introduzca password" runat="server" textmode="Password" CssClass="form-control"></asp:textbox>
                         </div>
 
                         <div class="form-group">
-                        <asp:button class="btn btn-primary" id="btnLogin" onclick="btnLogin_Click" runat="server" text="Acceder"></asp:button>
+                        <asp:button id="btnLogin" onclick="btnLogin_Click" runat="server" text="Acceder" CssClass="btn bg-primary btn-block"></asp:button>
                         </div>
 
                     </div>
@@ -59,7 +60,7 @@
             </div>
              
         </section>
-    </div>
+        
 
     <footer class="navbar navbar-fixed-bottom ">
         <div class="container text-right">

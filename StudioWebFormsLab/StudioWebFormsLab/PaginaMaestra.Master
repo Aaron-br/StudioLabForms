@@ -1,36 +1,61 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestra.master.cs" Inherits="StudioWebFormsLab.PaginaMaestra" %>
 
 <!DOCTYPE html>
+<%@ Import Namespace="System.Web.Optimization" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
- 
+    <%: Styles.Render("~/bundles/css/bootstrap") %>
+    <%: Styles.Render("~/bundles/css/jqueryUI") %>
+    <%: Styles.Render("~/bundles/css/estilos") %>
 </head>
 <body>
 
-    <header>
-        <asp:ContentPlaceHolder ID="Header" runat="server">
+
+    <div id="wrap"><div class="container"> 
+
+        <header>
+            <asp:ContentPlaceHolder ID="Header" runat="server">
             
-        </asp:ContentPlaceHolder>
-    </header>
+            </asp:ContentPlaceHolder>
+        </header>
 
 
-    <form id="form1" runat="server">
-    <div>
+        <form id="form1" runat="server">
+        <div>
         
 
-        <asp:ContentPlaceHolder ID="Menu" runat="server">
+            <asp:ContentPlaceHolder ID="Menu" runat="server">
 
-        </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder>
 
-        <asp:ContentPlaceHolder ID="Contenido" runat="server">
+            <asp:ContentPlaceHolder ID="Contenido" runat="server">
 
-        </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder>
 
        
 
-    </div>
-    </form>
+        </div>
+        </form>
+
+    </div></div><!-- wrap-->
+
+
+
+    <footer>
+        <div class="container">(C)2017 WebForms Lab.</div>
+    </footer>
+
+
+
+     <asp:PlaceHolder runat="server">        
+         <%: Scripts.Render("~/bundles/jquery") %>
+         <%: Scripts.Render("~/bundles/jqueryui") %>
+         <%: Scripts.Render("~/bundles/jqueryval") %>
+         <%: Scripts.Render("~/bundles/modernizr") %>
+         <%: Scripts.Render("~/bundles/bootstrap") %>
+    </asp:PlaceHolder>
+
 </body>
 </html>
