@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudioWebFormsLab", "Studio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccesLayer", "DataAcces\DataAccesLayer.csproj", "{01EEDDB1-0695-4EDD-98C7-ADEDC1E78AF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjectLayer", "BusinessObjectLayer\BusinessObjectLayer.csproj", "{FB80B47A-4199-43F8-9D3B-6F8BE0203224}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitiesLayer", "EntitiesLayer\EntitiesLayer.csproj", "{3799E49B-A0E4-4277-81A1-0EDDE41B3369}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{01EEDDB1-0695-4EDD-98C7-ADEDC1E78AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01EEDDB1-0695-4EDD-98C7-ADEDC1E78AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01EEDDB1-0695-4EDD-98C7-ADEDC1E78AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB80B47A-4199-43F8-9D3B-6F8BE0203224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB80B47A-4199-43F8-9D3B-6F8BE0203224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB80B47A-4199-43F8-9D3B-6F8BE0203224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB80B47A-4199-43F8-9D3B-6F8BE0203224}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3799E49B-A0E4-4277-81A1-0EDDE41B3369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3799E49B-A0E4-4277-81A1-0EDDE41B3369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3799E49B-A0E4-4277-81A1-0EDDE41B3369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3799E49B-A0E4-4277-81A1-0EDDE41B3369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

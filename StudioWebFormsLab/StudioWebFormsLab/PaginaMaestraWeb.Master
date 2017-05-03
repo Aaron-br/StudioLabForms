@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestraWeb.master.cs" Inherits="StudioWebFormsLab.PaginaMaestraWeb" %>
+
+<!DOCTYPE html>
+<%@ Import Namespace="System.Web.Optimization" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <%: Styles.Render("~/bundles/css/bootstrap") %>
+    <%: Styles.Render("~/bundles/css/jqueryUI") %>
+    <%: Styles.Render("~/bundles/css/estilos") %>
+
+    <!-- Mete un tema del bootstrap -->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <div class="container">
+          <div id="wrap">
+
+            <!-- Header -->
+            <header>
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+						<span class="sr-only"> Desplegar / Ocultar Menu </span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Aaron Bellot</a>		
+				</div>
+                <!-- Inicia Menú -->
+				<div class="collapse navbar-collapse" id="navegacion-fm">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Inicio</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+								Categorias <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Categoria 1</a></li>
+								<li><a href="#">Categoria 2</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Categoria 3</a></li>
+								<li><a href="#">Categoria 4</a></li>
+							</ul>
+
+						</li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Contacto</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+                      <li><a href="#">Default</a></li>
+                      <li><a href="#">Static top</a></li>
+                      <li class="active"><a href="#">Fixed top <span class="sr-only">(current)</span></a></li>
+                    </ul>
+
+				</div>
+
+
+			</div>
+		    </nav>
+            </header>
+
+            <!-- Jumbotron -->
+            <section>
+
+            </section>
+
+
+            <!-- Cuerpo de la página -->
+            <section class="main container">
+                <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="Menu" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="Contenido" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                </form>
+           </section>
+
+         </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container"><%: DateTime.Now.Day %> (C) 2017 WebForms Lab.</div>
+    </footer>
+
+
+
+    <asp:PlaceHolder runat="server">        
+         <%: Scripts.Render("~/bundles/jquery") %>
+         <%: Scripts.Render("~/bundles/jqueryui") %>
+         <%: Scripts.Render("~/bundles/jqueryval") %>
+         <%: Scripts.Render("~/bundles/modernizr") %>
+         <%: Scripts.Render("~/bundles/bootstrap") %>
+    </asp:PlaceHolder>
+
+</body>
+</html>

@@ -10,16 +10,16 @@
 namespace StudioWebFormsLab {
     
     
-    public partial class PaginaMaestra {
+    public partial class PaginaMaestraWeb {
         
         /// <summary>
-        /// Header control.
+        /// head control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Header;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
         /// form1 control.
