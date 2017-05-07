@@ -16,7 +16,7 @@ namespace DataAccesLayer
     //Proporciona un interfaz sencillo que permite recuperar los datos de la BD y 
     //salvar una enAdad de negocio en la BD.
 
-    public class AccesoDatos
+    public class UsuarioDAL
     {
        
 

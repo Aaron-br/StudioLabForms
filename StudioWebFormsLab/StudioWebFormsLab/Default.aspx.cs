@@ -11,7 +11,7 @@ namespace StudioWebFormsLab
 {
     public partial class Default : System.Web.UI.Page
     {
-        AccesoDatos a = new AccesoDatos();
+        UsuarioDAL a = new UsuarioDAL();
         
         protected void Page_Load(object sender, EventArgs e)
         {
