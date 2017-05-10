@@ -12,12 +12,12 @@ namespace BusinessObjectLayer
     {
 
         //Instanciamos nuestra clase UsuarioDal para poder utilizar las funciones del DAL
-        private UsuarioDAL _UsuarioDal = new UsuarioDAL();
+        private UsuarioDAL _UsuarioDAL = new UsuarioDAL();
 
         public ENUsuario DameUsuarioPorID(int idUsuario)
         {
             //Obtenemos los datos mediante la logica que proporciona el DAL
-            return _UsuarioDal.dameUsuarioPorID(idUsuario);
+            return _UsuarioDAL.dameUsuarioPorID(idUsuario);
             
         }
 

@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DataAccesLayer;
+
 using System.Web.UI.HtmlControls;
 
 namespace StudioWebFormsLab
 {
     public partial class Default : System.Web.UI.Page
     {
-        UsuarioDAL a = new UsuarioDAL();
+        //UsuarioDAL a = new UsuarioDAL();
         
         protected void Page_Load(object sender, EventArgs e)
         {
