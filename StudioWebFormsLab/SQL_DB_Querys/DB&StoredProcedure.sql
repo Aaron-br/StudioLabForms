@@ -10,7 +10,8 @@ GO
 -- =============================================
 CREATE PROCEDURE [dbo].[SPUsuarioByID] 
 	-- Parameters
-	@ID int
+	@ID int,
+	@OPERACION varchar(1)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from

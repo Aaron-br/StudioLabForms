@@ -10,11 +10,24 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:Label ID="Nombre" runat="server" Text=""></asp:Label>
-        <asp:Label ID="Apellido1" runat="server" Text=""></asp:Label>
-        <asp:Label ID="Apellido2" runat="server" Text=""></asp:Label>
-        <asp:Label ID="Edad" runat="server" Text=""></asp:Label>
-
+        <div class="table-responsive">
+            <input style="display:none" value="" id="numRegistros"/>
+            <input style="display:none" value="" id="numPaginas" />
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <% foreach (var usu in usuarios) { %>
+                        <tr>
+                            <td><%= usu.Nombre %></td>
+                        </tr>
+                      <% } %>
+                </tbody>
+            </table>
+        </div>
     </div>
     </form>
 </body>

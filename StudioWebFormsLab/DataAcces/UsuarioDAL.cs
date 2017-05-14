@@ -20,6 +20,7 @@ namespace DataAccesLayer
 
     public class UsuarioDAL
     {
+        //Obtener usuario por ID
         public ENUsuario dameUsuarioPorID(int idUsuario)
         {
             ENUsuario usu = new ENUsuario();
@@ -45,6 +46,7 @@ namespace DataAccesLayer
                                     //cmd.Parameters.AddWithValue("@Operacion", "S");
                                     //Pasamos los parametros del usuario                       
                                     cmd.Parameters.AddWithValue("@ID", idUsuario);
+                                    cmd.Parameters.AddWithValue("@OPERACION", "DameUsuario");
 
                                 SqlDataReader rd = cmd.ExecuteReader();
 
@@ -78,7 +80,68 @@ namespace DataAccesLayer
 
         }
 
+        //Obtener todos los usuarios de la BD
+        public List<ENUsuario> dameTodosUsuarios()
+        {
+            
+            List<ENUsuario> usuarios = new List<ENUsuario>();
+          
+            //Cadena de conxion a la base de datos
+            SqlConnection conexion = null;
 
+            try
+            {
+
+                //Creamos nuestro objeto de conexion usando nuestro archivo de configuraciones
+                using (conexion = SingletonConexion.getInstance().ConexionBDSothis())
+                {
+                    //Abrimos la conexion
+                    conexion.Open();
+
+                    //Conectamos el procedimiento almacenado que actualizará los datos
+                    using (SqlCommand cmd = new SqlCommand("SPUsuarioByID", conexion))
+                    {
+                        //Indicamos que vamos a ejecutar un procedimiento almacenado
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        //Indicamos el tipo de operación, en este caso Actualización
+                        cmd.Parameters.AddWithValue("@ID", -1);
+                        //Pasamos los parametros del usuario           
+                        cmd.Parameters.AddWithValue("@OPERACION", "Listado");
+                       
+
+                        SqlDataReader rd = cmd.ExecuteReader();
+
+                        if (rd.HasRows)
+                        {
+                            while (rd.Read())
+                            {
+                                usuarios.Add(new ENUsuario
+                                {
+                                    IdUsuario = Convert.ToInt32(rd["idUsuario"]);
+                                Nombre = Convert.ToString(rd["nombre"]);
+                                Apellido1 = Convert.ToString(rd["apellido1"]);
+                                Apellido2 = Convert.ToString(rd["apellido2"]);
+                                Edad = Convert.ToInt32(rd["edad"]);
+                                UsuarioROl = Convert.ToInt32(rd["usuarioRol"]);
+                                });
+                        }
+
+                        }
+                        else
+                        {
+                            // usu.Error.Append("No hay registros");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener usuario por ID: ", ex);
+            }
+
+            return usuarios;
+
+        }
 
     }
 }

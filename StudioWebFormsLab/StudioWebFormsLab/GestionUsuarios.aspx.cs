@@ -12,19 +12,13 @@ namespace StudioWebFormsLab
     public partial class GestionUsuarios : System.Web.UI.Page
     {
 
-        private UsuarioBLL _UsuarioDAL = new UsuarioBLL();
+        private UsuarioBLL _UsuarioBLL = new UsuarioBLL();
+        public List<ENUsuario> usuarios = new List<ENUsuario>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            ENUsuario usu = new ENUsuario();
-
-            usu = _UsuarioDAL.DameUsuarioPorID(2);
-
-            Nombre.Text = usu.Nombre;
-            Apellido1.Text = usu.Apellido1;
-            Apellido2.Text = usu.Apellido2;
-            Edad.Text =usu.Edad.ToString();
+            //Esto debe devolver una lista de usuarios
+            usuarios = _UsuarioBLL.DameTodosUsuarios().ToList();
 
         }
     }
