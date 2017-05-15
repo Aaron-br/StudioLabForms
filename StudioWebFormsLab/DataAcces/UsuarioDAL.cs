@@ -115,15 +115,15 @@ namespace DataAccesLayer
                         {
                             while (rd.Read())
                             {
-                                usuarios.Add(new ENUsuario
-                                {
-                                    IdUsuario = Convert.ToInt32(rd["idUsuario"]);
-                                Nombre = Convert.ToString(rd["nombre"]);
-                                Apellido1 = Convert.ToString(rd["apellido1"]);
-                                Apellido2 = Convert.ToString(rd["apellido2"]);
-                                Edad = Convert.ToInt32(rd["edad"]);
-                                UsuarioROl = Convert.ToInt32(rd["usuarioRol"]);
-                                });
+                                //usuarios.Add(new ENUsuario
+                                //{
+                                //    IdUsuario = Convert.ToInt32(rd["idUsuario"]);
+                                //Nombre = Convert.ToString(rd["nombre"]);
+                                //Apellido1 = Convert.ToString(rd["apellido1"]);
+                                //Apellido2 = Convert.ToString(rd["apellido2"]);
+                                //Edad = Convert.ToInt32(rd["edad"]);
+                                //UsuarioROl = Convert.ToInt32(rd["usuarioRol"]);
+                                //});
                         }
 
                         }
